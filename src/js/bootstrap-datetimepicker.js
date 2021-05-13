@@ -1433,19 +1433,19 @@
             }
             if ($this.is("svg")) {
               if (expanded.children(".datepicker").length > 0) {
-                $this.closest("svg").removeClass(options.icons.date);
-                $this.closest("svg").addClass(options.icons.time);
-              } else {
                 $this.closest("svg").removeClass(options.icons.time);
                 $this.closest("svg").addClass(options.icons.date);
+              } else {
+                $this.closest("svg").removeClass(options.icons.date);
+                $this.closest("svg").addClass(options.icons.time);
               }
             } else {
               if (expanded.children(".datepicker").length > 0) {
-                $this.closest("svg").removeClass(options.icons.date);
-                $this.closest("svg").addClass(options.icons.time);
-              } else {
                 $this.closest("svg").removeClass(options.icons.time);
                 $this.closest("svg").addClass(options.icons.date);
+              } else {
+                $this.closest("svg").removeClass(options.icons.date);
+                $this.closest("svg").addClass(options.icons.time);
               }
             }
 
