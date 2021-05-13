@@ -1584,6 +1584,10 @@
         showMode();
 
         $(window).on("resize", place);
+        widget.on("click", "td:not([data-action])", function (e) {
+          e.preventDefault();
+          return;
+        });
         widget.on("click", "[data-action]", doAction); // this handles clicks on the widget
         widget.on("mousedown", false);
 
