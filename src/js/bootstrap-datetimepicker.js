@@ -1506,10 +1506,6 @@
         close: hide,
       },
       doAction = function (e) {
-        if (!$(e.currentTarget).is("a")) {
-          e.currentTarget = $(e.currentTarget).closest("a");
-        }
-
         if ($(e.currentTarget).is(".disabled")) {
           return false;
         }
