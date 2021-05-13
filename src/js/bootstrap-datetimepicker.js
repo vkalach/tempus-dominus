@@ -1432,11 +1432,21 @@
               closed.addClass("in");
             }
             if ($this.is("svg")) {
-              $this.toggleClass(options.icons.time + " " + options.icons.date);
+              if (expanded.children(".datepicker").length > 0) {
+                $this.closest("svg").removeClass(options.icons.date);
+                $this.closest("svg").addClass(options.icons.time);
+              } else {
+                $this.closest("svg").removeClass(options.icons.time);
+                $this.closest("svg").addClass(options.icons.date);
+              }
             } else {
-              $this
-                .closest("svg")
-                .toggleClass(options.icons.time + " " + options.icons.date);
+              if (expanded.children(".datepicker").length > 0) {
+                $this.closest("svg").removeClass(options.icons.date);
+                $this.closest("svg").addClass(options.icons.time);
+              } else {
+                $this.closest("svg").removeClass(options.icons.time);
+                $this.closest("svg").addClass(options.icons.date);
+              }
             }
 
             // NOTE: uncomment if toggled state will be restored in show()
