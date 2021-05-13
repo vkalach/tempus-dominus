@@ -433,7 +433,7 @@
         if (!options.sideBySide && hasDate() && hasTime()) {
           row.push(
             $("<td>").append(
-              $("<a>")
+              $("<a class='d-inline-block w-100'>")
                 .attr({
                   "data-action": "togglePicker",
                   title: options.tooltips.selectTime,
@@ -1584,10 +1584,7 @@
         showMode();
 
         $(window).on("resize", place);
-        widget.on("click", "td:not([data-action])", function (e) {
-          e.preventDefault();
-          return;
-        });
+
         widget.on("click", "[data-action]", doAction); // this handles clicks on the widget
         widget.on("mousedown", false);
 
