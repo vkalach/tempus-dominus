@@ -1428,8 +1428,7 @@
               closed.addClass("in");
             } else {
               // otherwise just toggle in class on the two views
-              expanded.collapse("hide");
-              closed.collapse("show");
+              expanded.toggleClass("hide show");
               expanded.removeClass("in");
               closed.addClass("in");
             }
