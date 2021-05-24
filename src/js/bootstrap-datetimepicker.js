@@ -34,6 +34,7 @@
   }
 
   var dateTimePicker = function (element, options) {
+    element = window.$(element);
     var picker = {},
       date,
       viewDate,
